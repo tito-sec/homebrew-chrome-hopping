@@ -11,7 +11,7 @@ class ChromeHopping < Formula
   def install
     venv = libexec/"venv"
     system "python3.12", "-m", "venv", venv
-    system "#{venv}/bin/pip", "install", "rumps", "--quiet"
+    system "#{venv}/bin/pip", "install", "rumps", "pyobjc", "--quiet"
 
     (libexec/"app").mkpath
     cp "switcher.py", libexec/"app/switcher.py"
